@@ -35,12 +35,15 @@ import { SITE } from 'config.mjs';
     let lastKnownScrollPosition = window.scrollY;
     let ticking = true;
 
-    attachEvent('[data-aw-toggle-menu]', 'click', function (_, elem) {
+    const toggleMenu = function (_, elem) {
       elem.classList.toggle('expanded');
       document.body.classList.toggle('overflow-hidden');
       document.getElementById('header')?.classList.toggle('h-screen');
       document.querySelector('#header nav')?.classList.toggle('hidden');
-    });
+    };
+
+    attachEvent('[data-aw-toggle-menu]', 'click', toggleMenu);
+    attachEvent('[data-aw-toggle-menu-item]', 'click', toggleMenu);
 
     attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
       if (defaultTheme.endsWith(':only')) {

@@ -54,6 +54,7 @@ const { links = [], isSticky = false, showToggleTheme = false, position = 'cente
           links.map(({ text, href }) => (
             <li>
               <a
+                data-aw-toggle-menu-item
                 class="font-medium hover:text-gray-900 dark:hover:text-white py-3 flex items-center transition duration-150 ease-in-out"
                 href={href}
               >

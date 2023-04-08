@@ -26,5 +26,5 @@ export const footerData = {
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/simonzwong' },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/szwo' },
   ],
-  footNote: `<p class="text-muted text-xs">Bootstrapped with the AstroWind template. Thank you, onWidget!</p><p>&copy; 2023 Simon Wong & Wong Exposure</p>`,
+  footNote: `<p class="text-muted text-xs">Bootstrapped with the AstroWind template</p><p>&copy; 2023 Simon Wong & Wong Exposure</p>`,
 };
