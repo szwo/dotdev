@@ -2,19 +2,19 @@ export const headerData = {
   links: [
     {
       text: 'About',
-      href: '#',
+      href: '#about',
     },
     {
       text: 'Engineering',
-      href: '#',
+      href: '#engineering',
     },
     {
       text: 'Photography',
-      href: '#',
+      href: '#photography',
     },
     {
       text: 'Contact',
-      href: '#',
+      href: '#contact',
     },
   ],
 };
@@ -26,5 +26,5 @@ export const footerData = {
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/simonzwong' },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/szwo' },
   ],
-  footNote: `<p>&copy; 2023 Simon Wong & Wong Exposure</p><p class="text-muted text-xs">Bootstrapped with the AstroWind template. Thank you, onWidget!</p>`,
+  footNote: `<p class="text-muted text-xs">Bootstrapped with the AstroWind template. Thank you, onWidget!</p><p>&copy; 2023 Simon Wong & Wong Exposure</p>`,
 };
