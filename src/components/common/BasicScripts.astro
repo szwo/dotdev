@@ -42,8 +42,15 @@ import { SITE } from 'config.mjs';
       document.querySelector('#header nav')?.classList.toggle('hidden');
     };
 
+    const hideMenu = function (_, elem) {
+      const menuIsOpen = document.getElementById('header')?.classList.contains('h-screen');
+      if (menuIsOpen) {
+        toggleMenu(_, elem);
+      }
+    };
+
     attachEvent('[data-aw-toggle-menu]', 'click', toggleMenu);
-    attachEvent('[data-aw-toggle-menu-item]', 'click', toggleMenu);
+    attachEvent('[data-aw-toggle-menu-item]', 'click', hideMenu);
 
     attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
       if (defaultTheme.endsWith(':only')) {
