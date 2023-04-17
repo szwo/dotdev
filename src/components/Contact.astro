@@ -1,0 +1,22 @@
+---
+import Section from 'layouts/Section.astro';
+import { LINKS } from 'links';
+---
+
+<Section header="Contact" id="contact">
+  <p>
+    Thank you so much for visiting my site! If you&apos;d like to get in touch, please don&apos;t hesitate to reach out!
+  </p>
+  <div class="flex justify-center mt-8">
+    <a class="btn btn-primary sm:mb-0" href="mailto:hello@simonwong.dev">Send me an email</a>
+  </div>
+  <div class="relative flex items-center my-8">
+    <div class="flex-grow border-t border-current"></div>
+    <span class="flex-shrink mx-4">Or Connect with me via Social</span>
+    <div class="flex-grow border-t border-current"></div>
+  </div>
+  <div class="flex justify-center gap-4">
+    <a class="btn sm:mb-0" href={LINKS.LINKEDIN} target="_blank" rel="noopener">Connect with me on LinkedIn</a>
+    <a class="btn sm:mb-0" href={LINKS.INSTAGRAM} target="_blank" rel="noopener">Follow me on Instagram</a>
+  </div>
+</Section>

@@ -1,206 +1,23 @@
 ---
 import { SITE } from 'config.mjs';
 import Layout from 'layouts/PageLayout.astro';
-
-import Features from 'components/widgets/Features.astro';
-import Features2 from 'components/widgets/Features2.astro';
-import { Picture } from '@astrojs/image/components';
-import Section from 'layouts/Section.astro';
+import Contact from 'components/Contact.astro';
+import Hero from 'components/Hero.astro';
+import About from 'components/About.astro';
+import Engineering from 'components/Engineering.astro';
+import Photography from 'components/Photography.astro';
 
 const meta = {
   title: SITE.title,
   description: SITE.description,
   dontUseTitleTemplate: true,
 };
-
-const heroImage = {
-  src: import('assets/images/portrait.png'),
-  alt: 'AstroWind Hero Image',
-};
 ---
 
 <Layout {meta}>
-  <section class="px-4 py-8 md:py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
-    <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
-      <div class="flex-grow-1">
-        <h2 class="text-5xl md:text-6xl font-bold font-heading mb-4">Simon Wong</h2>
-        <p class="text-lg">Web Dev, Photographer, Human</p>
-      </div>
-      <div class="flex self-center justify-center p-6">
-        <Picture
-          class="rounded-full drop-shadow-xl"
-          widths={[400, 768, 1024, 2040]}
-          sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-          aspectRatio={1}
-          width={400}
-          height={400}
-          loading="eager"
-          {...heroImage}
-        />
-      </div>
-    </div>
-  </section>
-  <Section header="About Me" id="about">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <div class="flex flex-col items-center">
-      <Picture
-        class="drop-shadow-md mt-8 mb-4 rounded-md"
-        widths={[300, 768, 1024, 2040]}
-        sizes="(max-width: 767px) 300px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-        aspectRatio={1}
-        width={300}
-        height={300}
-        loading="eager"
-        {...heroImage}
-      />
-      <p>Caption</p>
-    </div>
-  </Section>
-  <Section header="Engineering" id="engineering">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <!-- Change Me -->
-    <Features
-      items={[
-        [
-          {
-            title: 'Astro + Tailwind CSS Integration',
-            description:
-              'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-            icon: 'tabler:brand-tailwind',
-          },
-          {
-            title: 'Ready-to-use Components',
-            description:
-              'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-            icon: 'tabler:components',
-          },
-          {
-            title: 'Best Practices',
-            description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-            icon: 'tabler:list-check',
-          },
-        ],
-        [
-          {
-            title: 'Excellent Page Speed',
-            description:
-              'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-            icon: 'tabler:rocket',
-          },
-          {
-            title: 'Search Engine Optimization (SEO)',
-            description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-            icon: 'tabler:arrows-right-left',
-          },
-        ],
-      ]}
-    />
-  </Section>
-  <Section header="Guiding Principles" id="eng-principles" level={3}>
-    <div>
-      <div class="mb-10">
-        <Features2
-          items={[
-            {
-              title: 'Headers',
-              description:
-                'In general, Headers contain information that makes it easier for visitors to interact with the website.',
-              icon: 'flat-color-icons:template',
-            },
-            {
-              title: 'Heros',
-              description:
-                'If you want your website to get more than its fair share of visitors, the Hero section needs to be stellar.',
-              icon: 'flat-color-icons:gallery',
-            },
-            {
-              title: 'Features',
-              description:
-                'Display your product in action and how the Features actually create a solution for your target customer.',
-              icon: 'flat-color-icons:todo-list',
-            },
-          ]}
-        />
-      </div>
-      <p>Want to learn more about how I work? Check out my Personal Operating Profile (POP)!</p>
-    </div>
-  </Section>
-  <Section header="Notable Projects" id="eng-projects" level={3}>
-    <div>
-      <div class="mb-10">
-        <Features2
-          title="Most used widgets"
-          subtitle="Provides frequently used components for building websites using Tailwind CSS"
-          highlight="Components"
-          items={[
-            {
-              title: 'Project 1',
-              description:
-                'In general, Headers contain information that makes it easier for visitors to interact with the website.',
-              icon: 'flat-color-icons:template',
-            },
-            {
-              title: 'Project 2',
-              description:
-                'If you want your website to get more than its fair share of visitors, the Hero section needs to be stellar.',
-              icon: 'flat-color-icons:gallery',
-            },
-            {
-              title: 'Project 3',
-              description:
-                'Display your product in action and how the Features actually create a solution for your target customer.',
-              icon: 'flat-color-icons:todo-list',
-            },
-          ]}
-        />
-      </div>
-      <div class="flex justify-center">
-        <a class="btn btn-primary sm:mb-0" href="#" target="_blank" rel="noopener">View full resume</a>
-      </div>
-    </div>
-  </Section>
-  <Section header="Photography" id="photography">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-    </p>
-    <!-- <div class="my-8 flex justify-between gap-4">
-      <div class="bg-cyan-400 w-[400px] h-[400px]"></div>
-      <div class="bg-cyan-400 w-[400px] h-[400px]"></div>
-      <div class="bg-cyan-400 w-[400px] h-[400px]"></div>
-    </div> -->
-    <div class="flex justify-center mt-8">
-      <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Learn more about my work</a>
-    </div>
-  </Section>
-  <Section header="Contact" id="contact">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-    </p>
-    <div class="flex justify-center mt-4">
-      <a class="btn btn-primary sm:mb-0" href="#" target="_blank" rel="noopener">Send me an email</a>
-    </div>
-    <div class="relative flex items-center my-8">
-      <div class="flex-grow border-t border-current"></div>
-      <span class="flex-shrink mx-4">Or Connect with me via Social</span>
-      <div class="flex-grow border-t border-current"></div>
-    </div>
-    <div class="flex justify-center gap-4">
-      <a class="btn btn-primary sm:mb-0" href="#" target="_blank" rel="noopener">Connect with me on LinkedIn</a>
-      <a class="btn btn-primary sm:mb-0" href="#" target="_blank" rel="noopener">Follow me on Instagram</a>
-    </div>
-  </Section>
+  <Hero />
+  <About />
+  <Engineering />
+  <Photography />
+  <Contact />
 </Layout>

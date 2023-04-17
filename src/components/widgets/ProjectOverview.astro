@@ -1,0 +1,51 @@
+---
+import { ImageMetadata } from '@astrojs/image/dist/vite-plugin-astro-image';
+
+interface Item {
+  title?: string;
+  organization?: string;
+  description?: string;
+  technologies?: Array<string>;
+  icon?: ImageMetadata;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+  items: Array<Item>;
+}
+
+const { items = [] } = Astro.props;
+---
+
+<div class="relative max-w-7xl mx-auto">
+  <div class={`grid gap-6 grid-cols-1 md:my-12 dark:text-white items-stretch`}>
+    {
+      items.map(({ title, organization, description, technologies, icon }) => (
+        <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800">
+          <div class="flex items-center">
+            <div class="flex items-center">
+              <img {...icon} class="h-12 w-12 aspect-square" />
+            </div>
+            <div class="ml-4">
+              <div class="text-xl font-bold">{title}</div>
+              <div>{organization}</div>
+            </div>
+          </div>
+          {description && <p class="text-muted dark:text-gray-400 text-md mt-4" set:html={description} />}
+          {technologies?.length && (
+            <div>
+              <p class="my-4 text-lg font-bold">Key Technologies</p>
+              <ul>
+                {technologies.map((technology) => (
+                  <li class="btn py-2 px-4 m-1">{technology}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</div>

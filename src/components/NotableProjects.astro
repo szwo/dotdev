@@ -1,0 +1,79 @@
+---
+import Section from 'layouts/Section.astro';
+
+import lluna from 'assets/images/lluna.svg';
+import ikea from 'assets/images/ikea.svg';
+import vanguard from 'assets/images/vanguard.jpg';
+import ProjectOverview from './widgets/ProjectOverview.astro';
+---
+
+<Section header="Notable Projects" id="eng-projects" level={3}>
+  <div>
+    <div class="mb-10">
+      <ProjectOverview
+        title="Most used widgets"
+        subtitle="Provides frequently used components for building websites using Tailwind CSS"
+        highlight="Components"
+        items={[
+          {
+            title: 'Personal Operating Profile (POP)',
+            organization: 'LLUNA',
+            description: `<p class="mb-2 text-muted dark:text-gray-400 text-md">I recently joined a small but ambitious startup as their lead software engineer, where I have been focused on the modernization of their core SaaS technology products: the Personal Operating Profile (POP) and TeamOS. I have been helping the LLUNA team rebuild their core SaaS product using modern coding and design practices to create a better user experience and allow for greater flexibility.</p>
+              <p class="text-muted dark:text-gray-400 text-md">In addition to leading architecture and software development efforts, I work directly with the CEO and CTO to help drive decisions that best support the product and the growth of the organization.</p>`,
+            technologies: [
+              'TypeScript',
+              'React',
+              'Sass/SCSS',
+              'NextJS',
+              'GraphQL',
+              'Node.js',
+              'Prisma',
+              'PostgreSQL',
+              'GCP',
+              'Vercel',
+              'Jest',
+              'React Testing Library',
+            ],
+            icon: lluna,
+          },
+          {
+            title: 'IKEA.com Shopping Cart',
+            organization: 'IKEA US Digital Hub',
+            description: `<p class="mb-2 text-muted dark:text-gray-400 text-md">I had the awesome opportunity to support one of my favorite brands, IKEA, by joining their global web checkout product team. I joined a cross-functional team based out of Sweden that is responsible for the shopping cart on IKEA.com, where I developed and helped to launch client-facing experiments deployed to 30+ countries.</p>
+              <p class="text-muted dark:text-gray-400 text-md">In addition to my day-to-day code contributions, I also worked directly with a director of software engineering to establish a technical talent evaluation pipeline and helped to facilitate interviewing for both prospective engineers and technical leaders.</p>`,
+            technologies: [
+              'TypeScript',
+              'React',
+              'Sass/SCSS',
+              'Node.js',
+              'GraphQL',
+              'Express',
+              'GCP',
+              'Jest',
+              'React Testing Library',
+              'Optimizely',
+            ],
+            icon: ikea,
+          },
+          {
+            title: 'Personal Investor Portfolio Overview',
+            organization: 'Vanguard',
+            description: `<p class="mb-2 text-muted dark:text-gray-400 text-md">I joined the Client Experience team at Vanguard to help the organization modernize their retail investor digital journey. As a software engineer on one of their cross-functional lab teams, I drove technical efforts to redesign of one of Vanguard.com&apos;s most heavily accessed pages: the retail investor overview page.</p><p  class="text-muted dark:text-gray-400 text-md">In addition to code contributions, I also managed a small group of engineers as a developer chapter lead. I love coaching and mentorship, and it was a great opportunity to help junior engineers find their way in a large company.</p>`,
+            technologies: [
+              'TypeScript',
+              'Angular',
+              'Sass/SCSS',
+              'Node.js',
+              'NestJS',
+              'GraphQL',
+              'AWS',
+              'Jest',
+              'Cypress',
+            ],
+            icon: vanguard,
+          },
+        ]}
+      />
+    </div>
+  </div>
+</Section>

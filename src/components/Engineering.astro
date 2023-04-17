@@ -1,0 +1,55 @@
+---
+import Section from 'layouts/Section.astro';
+import Features from './widgets/Features.astro';
+---
+
+<Section header="Engineering" id="engineering">
+  <p>
+    I have been a professional software engineer for nearly a decade now, and have loved every moment of it. Throughout
+    my career, I have worn many hats within IT organizations and am incredibly grateful for these opportunities to shape
+    the diversity of my skillset.
+  </p>
+  <br />
+  <p>Here&apos;s a small glimpse into my current technical repertoire:</p>
+  <Features
+    items={[
+      [
+        {
+          title: 'Full-Stack Web Development',
+          description:
+            'I primarily code in JavaScript (preferably TypeScript) with experience in <strong>React</strong> and <strong>Node.js</strong>',
+          icon: 'tabler:code',
+        },
+        {
+          title: 'Software Testing',
+          description:
+            'I am a strong advocate for test-driven development and automated testing, using tools like <strong>Jest</strong> and <strong>React Testing Library</strong>',
+          icon: 'tabler:list-check',
+        },
+        {
+          title: 'Infrastructure + Ops',
+          description:
+            'I have experience deploying and maintaining scalable, observable systems in the cloud. Notably I&apos;ve worked with <strong>AWS</strong> and <strong>GCP</strong>',
+          icon: 'tabler:cloud',
+        },
+      ],
+      [
+        {
+          title: 'Product Design + Strategy',
+          description:
+            'I love working in a <strong>Product Ownership</strong> model, where I can help build data-driven software products that meet customers where they are',
+          icon: 'tabler:rocket',
+        },
+        {
+          title: 'Project Management + Leadership',
+          description:
+            'I have experience in both <strong>project</strong> and <strong>people management</strong>, leading diverse engineering teams to accomplish shared goals',
+          icon: 'tabler:medal',
+        },
+      ],
+    ]}
+  />
+  <div class="flex justify-center mt-12 md:mt-16">
+    <a class="btn btn-primary sm:mb-0" href="/experience">Learn more about my engineering experience</a>
+  </div>
+</Section>

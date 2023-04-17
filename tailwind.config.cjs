@@ -14,6 +14,10 @@ module.exports = {
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        'waves-top': "url('src/assets/images/waves-top.svg')",
+        'waves-2-bottom': "url('src/assets/images/waves-2-bottom.svg')",
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],
