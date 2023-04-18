@@ -1,4 +1,4 @@
-import defaultImage from './assets/images/default.png';
+import dogsPic from './assets/images/simon_dogs.png';
 
 const CONFIG = {
   name: 'Simon Wong',
@@ -9,7 +9,7 @@ const CONFIG = {
 
   title: 'Simon Wong',
   description: 'Personal Website of Simon Wong',
-  defaultImage: defaultImage,
+  defaultImage: dogsPic,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
