@@ -1,6 +1,6 @@
 {
-  "name": "astro",
-  "description": "A template to make your website using Astro + Tailwind CSS.",
+  "name": "simonwongdotdev",
+  "description": "Simon Wong's Personal Website",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
@@ -13,8 +13,6 @@
   },
   "devDependencies": {
     "@astrojs/image": "^0.16.4",
-    "@astrojs/mdx": "^0.18.2",
-    "@astrojs/partytown": "^1.2.0",
     "@astrojs/rss": "^2.3.2",
     "@astrojs/sitemap": "^1.2.1",
     "@astrojs/tailwind": "^3.1.1",
