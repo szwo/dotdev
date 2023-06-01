@@ -2,7 +2,7 @@
 import { Picture } from '@astrojs/image/components';
 
 const heroImage = {
-  src: import('assets/images/portrait.png'),
+  src: import('assets/images/me-full.jpeg'),
   alt: 'Picture of Simon Wong',
 };
 ---
@@ -15,10 +15,9 @@ const heroImage = {
     </div>
     <div class="flex self-center justify-center p-6">
       <Picture
-        class="rounded-full drop-shadow-xl"
+        class="rounded-xl drop-shadow-xl"
         widths={[400, 768, 1024, 2040]}
         sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-        aspectRatio={1}
         width={400}
         height={400}
         loading="eager"
