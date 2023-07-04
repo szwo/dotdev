@@ -1,18 +1,50 @@
 ---
+import { Picture } from '@astrojs/image/components';
 import Section from 'layouts/Section.astro';
+
+const images = [
+  {
+    src: import('assets/images/sample1.jpg'),
+    alt: 'Sample photo of Hogsmeade Village taken by Simon',
+  },
+  {
+    src: import('assets/images/sample2.jpg'),
+    alt: `Sample photo of Oreo (Simon's dog) taken by Simon`,
+  },
+  {
+    src: import('assets/images/sample3.jpg'),
+    alt: `Sample photo of Simon's family taken by Simon`,
+  },
+  {
+    src: import('assets/images/sample4.jpg'),
+    alt: 'Sample photo of Valley Forge Park, taken by Simon',
+  },
+];
 ---
 
 <Section header="Photography" id="photography">
   <p>
-    I recently started down my photography journey, and have been loving every minute of it! I can&apos;t wait to show
-    you what I have been working on, so stay tuned!
+    I recently started down my photography journey, and have been loving every minute of it! Here's a small sample of
+    some of my favorite shots.
   </p>
-  <!-- <div class="my-8 flex justify-between gap-4">
-      <div class="bg-cyan-400 w-[400px] h-[400px]"></div>
-      <div class="bg-cyan-400 w-[400px] h-[400px]"></div>
-      <div class="bg-cyan-400 w-[400px] h-[400px]"></div>
-    </div> -->
+  <div class="my-8 flex justify-between gap-4">
+    {
+      images.map((image) => (
+        <div>
+          <Picture
+            class="my-4 rounded-md hover:scale-110 transition duration-500 p-1"
+            widths={[250, 500, 750, 1000]}
+            aspectRatio={2 / 3}
+            width={600}
+            height={800}
+            loading="eager"
+            {...image}
+          />
+        </div>
+      ))
+    }
+  </div>
   <div class="flex justify-center mt-8">
-    <a class="btn btn-ghost cursor-not-allowed pointer-events-none" aria-disabled="true">Coming soon!</a>
+    <a class="btn btn-ghost cursor-not-allowed pointer-events-none" aria-disabled="true">More coming soon!</a>
   </div>
 </Section>
