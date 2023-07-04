@@ -30,14 +30,14 @@ const images = [
   <div class="my-8 flex justify-between gap-4">
     {
       images.map((image) => (
-        <div>
+        <div class="p-1">
           <Picture
-            class="my-4 rounded-md p-1 hover:scale-110 transition duration-500 object-cover"
+            class="my-4 rounded-md"
             widths={[250, 500, 750, 1000]}
             aspectRatio={2 / 3}
             width={600}
             height={800}
-            loading="eager"
+            loading="lazy"
             {...image}
           />
         </div>
