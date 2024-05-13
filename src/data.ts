@@ -28,5 +28,5 @@ export const footerData = {
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: LINKS.LINKEDIN },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: LINKS.GITHUB },
   ],
-  footNote: `&copy; 2023 Simon Wong`,
+  footNote: `&copy; 2024 Simon Wong`,
 };
