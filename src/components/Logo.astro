@@ -1,4 +1,11 @@
 ---
+import { Picture } from '@astrojs/image/components';
+
+const image = {
+  src: import('assets/images/me-laptop.png'),
+  alt: 'Emoji version of Simon with a laptop',
+};
 ---
 
-<span class="self-center text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">王家民</span>
+<Picture widths={[278, 278, 278, 278]} sizes="278px" aspectRatio={1 / 1} width={50} loading="eager" {...image} />
+<!-- <span class="self-center text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">王家民</span> -->
