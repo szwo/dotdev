@@ -8,6 +8,7 @@ import NotableProjects from 'components/NotableProjects.astro';
 import { LINKS } from 'links';
 import { Icon } from 'astro-icon';
 
+import lifebrand from 'assets/images/lifebrand.png';
 import lluna from 'assets/images/lluna.svg';
 import ikea from 'assets/images/ikea.svg';
 import vanguard from 'assets/images/vanguard.jpg';
@@ -33,8 +34,17 @@ type JobOverview = {
 
 const JOBS: Array<JobOverview> = [
   {
-    icon: lluna,
+    icon: lifebrand,
     title: 'Lead Software Engineer',
+    company: 'LifeBrand',
+    current: true,
+    start: '2023',
+    description: `An exciting technology startup focused on helping individuals and businesses build their social media brand. We use AI to analyze past social media posts for content that doesn't align with the brand you want to build. For businesses and schools, LifeBrand leads the industry with an accredited social media education platform in addition to our services.`,
+    link: 'https://www.lifebrand.life/',
+  },
+  {
+    icon: lluna,
+    title: 'Founding Software Engineer',
     company: 'LLUNA',
     current: true,
     start: '2023',
